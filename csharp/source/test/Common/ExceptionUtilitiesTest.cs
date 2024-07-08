@@ -45,7 +45,7 @@ public class ExceptionUtilitiesTest {
 	/// <returns>検証集合</returns>
 	private static IEnumerable<TestCaseData> ToStringList() {
 		yield return new(new Exception().SetData("Name1", "Data1").SetData("Name2", "Data2"), @"System.Exception {
-	TargetSite : Void <ToStringCode>b__0()
+	TargetSite : (System.Reflection.RuntimeMethodInfo)Void <ToStringCode>b__0()
 	Message : ""Exception of type 'System.Exception' was thrown.""
 	Data : {
 		""Name1"" : ""Data1""
@@ -60,7 +60,7 @@ public class ExceptionUtilitiesTest {
 		yield return new(new ArgumentNullException("source"), @"System.ArgumentNullException {
 	Message : ""Value cannot be null. (Parameter 'source')""
 	ParamName : ""source""
-	TargetSite : Void <ToStringCode>b__0()
+	TargetSite : (System.Reflection.RuntimeMethodInfo)Void <ToStringCode>b__0()
 	Data : {
 	}
 	InnerException : Null
@@ -104,7 +104,7 @@ public class ExceptionUtilitiesTest {
 			.SetData("Data", new object())
 			.SetLink("https://github.com/occhitta/library-tester")
 			, @"System.Exception {
-	TargetSite : Void <ToStringCode>b__0()
+	TargetSite : (System.Reflection.RuntimeMethodInfo)Void <ToStringCode>b__0()
 	Message : ""Failure Message""
 	Data : {
 		""Flag"" : True
@@ -125,7 +125,7 @@ public class ExceptionUtilitiesTest {
 		""Date"" : 2001-02-03
 		""Time"" : 01:02:03.0040050
 		""DT01"" : 2001-02-03T04:05:06.0070080
-		""DT02"" : 2001-02-03T04:05:06.0070080(+09:00)
+		""DT02"" : 2001-02-03T04:05:06.0070080+09:00
 		""Ts01"" : +01.02:03:04.0050060
 		""Ts02"" : -01.02:03:04.0050060
 		""Ch-A"" : 'A'

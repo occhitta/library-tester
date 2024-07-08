@@ -1,7 +1,7 @@
 ## Occhitta's Tester Library by C#
 Sorry, The following text is in Japanese only
 ### 当該プロジェクトについて
-NUnit[^1]を利用した共通処理を定義したプロジェクトとなります
+NUnit[^1]を利用した共通処理プロジェクトとなります
 ### テスト定義について
 認識の違いがある可能性がありますが、以下の定義とします
 1. 実装テスト(Module Test)※日本語では「モジュールテストに置き換え」  
