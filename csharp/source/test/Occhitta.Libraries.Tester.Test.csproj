@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- 基本設定 -->
+  <PropertyGroup>
+    <!-- アセンブリ名 -->
+    <AssemblyName>Occhitta.Libraries.Tester.Test</AssemblyName>
+    <!-- 実行環境設定 -->
+    <TargetFramework>net8.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <!-- 記述制約設定 -->
+    <ImplicitUsings>disable</ImplicitUsings><!-- 左記は「GlobalCode.cs」にて定義する為、「disable」とする -->
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <!-- 参照設定(検証参照) -->
+  <ItemGroup>
+    <ProjectReference Include="..\code\Occhitta.Libraries.Tester.Code.csproj" />
+  </ItemGroup>
+
+  <!-- 参照設定(外部参照) -->
+  <ItemGroup>
+    <PackageReference Include="coverlet.msbuild" Version="6.0.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
+    <PackageReference Include="NUnit.Analyzers" Version="3.6.1" />
+    <PackageReference Include="coverlet.collector" Version="6.0.0" />
+  </ItemGroup>
+
+  <!-- 参照設定(内部参照) -->
+</Project>
